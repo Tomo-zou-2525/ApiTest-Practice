@@ -60,8 +60,14 @@ export default {
         .post(url, this.posts)
         .then((res) => {
           // 成功処理
+<<<<<<< HEAD
           this.contents = res.data;
           console.log(this.contents);
+=======
+          //contentsの配列に加える処理
+          this.contents = res.data;
+          // console.log(this.contents);
+>>>>>>> develop
           this.$swal("保存に成功しました", "クリックしてください", "success");
         })
         .catch((e) => {

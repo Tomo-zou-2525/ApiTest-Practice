@@ -39,7 +39,7 @@ export default {
     // axiosを使用
     this.getContents();
     // async/awaitを使用
-    // this.getContentsAsync();
+    this.getContentsAsync();
   },
   methods: {
     // APIでコンテンツを取得
@@ -61,8 +61,8 @@ export default {
         .then((res) => {
           // 成功時処理
           //contentsの配列に加える処理
-          this.contents = res.data;
-          // console.log(this.contents);
+          // this.contents = res.data;
+          console.log(res);
           this.$swal("保存に成功しました", "クリックしてください", "success");
         })
         .catch((e) => {

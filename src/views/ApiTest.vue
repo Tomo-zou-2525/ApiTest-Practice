@@ -59,7 +59,7 @@ export default {
       axios
         .post(url, this.posts)
         .then((res) => {
-          // 成功処理
+          // 成功時処理
           //contentsの配列に加える処理
           this.contents = res.data;
           // console.log(this.contents);

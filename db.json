@@ -1,0 +1,44 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "title": "title - foo",
+      "body": "body - bar",
+      "author-id": 1
+    },
+    {
+      "id": 2,
+      "title": "title - foo2",
+      "body": "body - bar",
+      "author-id": 1
+    },
+    {
+      "id": 3,
+      "title": "title - foo",
+      "body": "body - bal",
+      "author-id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "テスト",
+      "author": "テスト",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

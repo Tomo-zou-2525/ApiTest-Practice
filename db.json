@@ -24,6 +24,11 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "title": "テスト",
+      "author": "テスト",
+      "id": 2
     }
   ],
   "comments": [
@@ -37,4 +42,3 @@
     "name": "typicode"
   }
 }
-

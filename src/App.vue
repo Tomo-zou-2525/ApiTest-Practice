@@ -3,7 +3,8 @@
     <p><VueSwatche /></p>
     <div id="nav">
       <router-link to="/">DrawTool</router-link> |
-      <router-link to="/about">Calender</router-link>
+      <router-link to="/about">Calender</router-link> |
+      <router-link to="/api-test">Api-Test</router-link>
     </div>
     <router-view />
   </div>

@@ -4,11 +4,9 @@ import router from "./router";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 
-import BootstrapVue from "bootstrap-vue"; // add
-import "bootstrap/dist/css/bootstrap.css"; // add
-import "bootstrap-vue/dist/bootstrap-vue.css"; // add
-
-
+import BootstrapVue from "bootstrap-vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 
 //ボタンの色をグローバルに設定
 const options = {
@@ -17,10 +15,8 @@ const options = {
 };
 
 Vue.use(VueSweetalert2, options);
-
-Vue.use(BootstrapVue); // add
-
-
+// Vue.use(VueAxios, axios);
+Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;
 

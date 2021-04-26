@@ -3,28 +3,24 @@
     {
       "id": 1,
       "title": "title - foo",
-      "body": "body - bar",
-      "author-id": 1
+      "body": "body - bar"
     },
     {
       "id": 2,
       "title": "title - foo2",
-      "body": "body - bar",
-      "author-id": 1
+      "body": "body - bar2"
     },
     {
       "id": 3,
-      "title": "title - foo",
-      "body": "body - bal",
-      "author-id": 2
+      "title": "title - foo3",
+      "body": "body - bar3"
     }
-	],
+  ],
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-
+      "title": "ご確認のほど",
+      "body": "宜しくお願い致します",
+      "id": 1
     }
   ],
   "comments": [
@@ -38,4 +34,3 @@
     "name": "typicode"
   }
 }
-

@@ -1,19 +1,27 @@
 <template>
   <div>
-    <!-- 登録情報を表示 -->
-    <div v-for="content in contents" :key="content.id">
-      <span>{{ content.id }}</span>
-      <span>{{ content.title }}</span>
-      <span>{{ content.body }}</span>
-    </div>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <td>ID</td>
+          <td>Title</td>
+          <td>Contets</td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 登録情報を表示 -->
+        <tr v-for="content in contents" :key="content.id">
+          <td>{{ content.id }}</td>
+          <td>{{ content.title }}</td>
+          <td>{{ content.body }}</td>
+        </tr>
+      </tbody>
+    </table>
     <form>
-      <!-- 投稿フォーム -->
-      <span>title</span>
       <!-- 投稿タイトルをバインド -->
-      <input v-model="posts.title" type="text" />
-      <span>author</span>
+      <input v-model="posts.title" type="text" placeholder="Title" />
       <!-- 投稿内容をバインド -->
-      <input v-model="posts.author" type="text" />
+      <input v-model="posts.body" type="text" placeholder="Content" />
     </form>
     <button type="button" @click="postPosts()">投稿</button>
   </div>
@@ -30,17 +38,13 @@ export default {
       //title,authorを保存させる空のデータを作る
       posts: {
         title: "",
-        author: "",
+        body: "",
       },
     };
   },
-  //Vueインスタンスのmount後にjsonデータを取得させる
   mounted() {
     // axiosを使用
     this.getContents();
-    // async/awaitを使用
-    this.getContentsAsync();
-
   },
   methods: {
     // APIでコンテンツを取得
@@ -55,33 +59,30 @@ export default {
           console.error("Error!!!!!!");
         });
     },
-    postPosts() {
+    async postPosts() {
+      //urlを定数に代入
       const url = "http://localhost:3000/posts";
-      axios
-        .post(url, this.posts)
-        .then((res) => {
-
-          // 成功処理
-          //contentsの配列に加える処理
-          this.contents = res.data;
-          // console.log(this.contents);
-
-          this.$swal("保存に成功しました", "クリックしてください", "success");
-        })
-        .catch((e) => {
-          // 失敗処理
-          console.error(e);
-        });
-    },
-    async getContentsAsync() {
-      try {
-        const url = "http://localhost:3000/contents";
-        const res = await axios.get(url);
-        this.contents = res.data;
-      } catch (error) {
-        console.error("Error!!!");
-      }
+      //awaitでpost リクエストを先に流す
+      await axios.post(url, this.posts);
+      //連続してawaitでgetメソッドを流す
+      const response = await axios.get(url); // getで再取得
+      this.contents = response.data; // 再取得した結果を代入
+      this.$swal("保存に成功しました", "クリックしてください", "success");
     },
   },
 };
 </script>
+
+<style>
+.table {
+  width: 100%;
+}
+
+.thead-dark {
+  background-color: #333;
+  height: 60px;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+}
+</style>

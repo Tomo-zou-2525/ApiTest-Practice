@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-<<<<<<< HEAD
     "bootstrap-vue": "^2.21.2",
-=======
->>>>>>> 6d388c73eb1aa786cf69c9c2cd5806959475adb8
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",

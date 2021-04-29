@@ -56,7 +56,7 @@ export default {
         },
         timeout: 2000,
       });
-
+      //インスタンスでURL取得
       instanceGet
         .get("/contents")
         .then((res) => {
@@ -66,6 +66,7 @@ export default {
           console.error("Error!!!!!!");
         });
     },
+    //インスタンスでURL取得（書き方おかしいですかね？）
     async postPosts() {
       const instancePost = axios.create({
         baseURL: "http://localhost:3000/",
@@ -74,12 +75,8 @@ export default {
         },
         timeout: 2000,
       });
-
-      //urlを定数に代入
-      // const url = "http://localhost:3000/posts";
-      //awaitでpost リクエストを先に流す
+      //インスタンスでURL取得（ここも書き方おかしいですかね？）
       await instancePost.post("/posts", this.posts);
-      //連続してawaitでgetメソッドを流す
       const response = await axios.get("/contents"); // getで再取得
       this.contents = response.data; // 再取得した結果を代入
       this.$swal("保存に成功しました", "クリックしてください", "success");

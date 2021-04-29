@@ -62,12 +62,12 @@ export default {
       return date.subtract(dayOfWeekNum, "days");
     },
     getCalendar() {
-      let startDate = this.getStartDate();
+      const startDate = this.getStartDate();
       const endDate = this.getEndDate();
       const weekNumber = Math.ceil(endDate.diff(startDate, "days") / 7);
 
       let calendars = [];
-      let calendarDate = this.getStartDate();
+      const calendarDate = this.getStartDate();
       for (let week = 0; week < weekNumber; week++) {
         let weekRow = [];
         for (let day = 0; day < 7; day++) {
@@ -99,7 +99,7 @@ export default {
     },
     //現在の日時を判定する処理
     isToday: function() {
-      let date = moment();
+      const date = moment();
       if (this.getCalendar === date) {
         return true;
       }

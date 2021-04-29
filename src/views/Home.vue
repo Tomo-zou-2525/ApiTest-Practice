@@ -152,15 +152,17 @@ export default {
 <style scoped>
 #nav-bar {
   background-color: #333;
-  height: 60px;
+  height: 4.28rem;
   width: 100%;
 }
 
 .canvas-map {
-  background-image: linear-gradient(0deg, transparent 31px, #333 32px),
-    linear-gradient(90deg, transparent 31px, #333 32px);
+  background-image: linear-gradient(0deg, transparent 31px, #333 2.28rem),
+    linear-gradient(90deg, transparent 2.21rem, #333 0.2rem);
   background-color: #e6e3ad;
-  background-size: 32px 32px;
+  background-size: 2.28rem 2.28rem;
+  height: 100%;
+  width: 100%;
 }
 
 /* 消しゴム要素の画像指定 */
@@ -169,11 +171,11 @@ export default {
 }
 
 .button-style {
-  margin-left: 10px;
+  margin-left: 0.8rem;
   background-color: #ddd;
   font-size: 1.4em;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 0.8rem 2.4rem;
   display: inline;
 }
 </style>

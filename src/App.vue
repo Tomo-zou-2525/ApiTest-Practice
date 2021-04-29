@@ -1,22 +1,16 @@
 <template>
   <div id="app">
-    <p><VueSwatche /></p>
     <div id="nav">
       <router-link to="/">DrawTool</router-link> |
-      <router-link to="/about">Calender</router-link> |
-      <router-link to="/api-test">Api-Test</router-link>
+      <router-link to="/calendar">Calender</router-link> |
+      <router-link to="/api-test">Api-Test</router-link> |
     </div>
     <router-view />
   </div>
 </template>
 <script>
-import VueSwatche from "./components/VueSwatche";
-
 export default {
   name: "App",
-  components: {
-    VueSwatche,
-  },
 };
 </script>
 

@@ -17,6 +17,7 @@ const options = {
 Vue.use(VueSweetalert2, options);
 // Vue.use(VueAxios, axios);
 Vue.use(BootstrapVue);
+Vue.use(require("vue-moment"));
 
 Vue.config.productionTip = false;
 

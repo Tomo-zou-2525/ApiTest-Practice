@@ -39,34 +39,36 @@
   </div>
 </template>
 <script>
+import moment from "moment";
+
 export default {
   data() {
     return {
-      weekdays: ["日", "月", "火", "水", "木", "金", "土"],
-      year: 2020,
-      month: 3,
+      // weekdays:
+      // year: 2020,
+      // month: 3,
       day: -1,
       today: "",
       isModel: false,
     };
   },
   mounted() {
-    var date = new Date();
-    var y = date.getFullYear();
-    var m = ("0" + (date.getMonth() + 1)).slice(-2);
-    var d = ("0" + date.getDate()).slice(-2);
+    let date = this.$moment().format();
+    // let y = date.getFullYear();
+    // let m = ("0" + (date.getMonth() + 1)).slice(-2);
+    // let d = ("0" + date.getDate()).slice(-2);
 
-    // yearとmonthを設定
-    this.year = y;
-    this.month = Number(m);
-    // 今日の日付を設定
-    this.today = y + "-" + m + "-" + d;
+    // // yearとmonthを設定
+    // this.year = y;
+    // this.month = Number(m);
+    // // 今日の日付を設定
+    // this.today = y + "-" + m + "-" + d;
   },
   methods: {
     /**
      * カレンダー日付クリック時の処理
      */
-    dateClick: function (dayNum) {
+    dateClick: function(dayNum) {
       if (dayNum !== "") {
         this.day = dayNum;
       }
@@ -76,17 +78,17 @@ export default {
      * 年、月は現在選択しているページ
      * 日は引数
      */
-    isToday: function (day) {
-      var date = this.year + "-" + ("0" + this.month).slice(-2) + "-" + day;
-      if (this.today === date) {
+    isToday: function(day) {
+      // let date = this.year + "-" + ("0" + this.month).slice(-2) + "-" + day;
+      if (this.today === this.date) {
         return true;
       }
       return false;
     },
-    /**
-     * 先月のカレンダーを取得
+    /*  moment の日付操作
+      先月のカレンダーを取得
      */
-    setLastMonth: function () {
+    setLastMonth: function() {
       if (this.month === 1) {
         this.year--;
         this.month = 12;
@@ -98,7 +100,7 @@ export default {
     /**
      * 翌月のカレンダーを取得
      */
-    setNextMonth: function () {
+    setNextMonth: function() {
       if (this.month === 12) {
         this.year++;
         this.month = 1;
@@ -109,21 +111,21 @@ export default {
     },
   },
   computed: {
-    calData: function () {
+    calData: function() {
       console.log(this.year + "-" + this.month + "のデータ作成");
-      var calData = [];
+      let calData = [];
       // 初日の曜日を取得
-      var firstWeekDay = new Date(this.year, this.month - 1, 1).getDay();
+      let firstWeekDay = new Date(this.year, this.month - 1, 1).getDay();
       // 月の日数
-      var lastDay = new Date(this.year, this.month, 0).getDate();
+      let lastDay = new Date(this.year, this.month, 0).getDate();
       // 日数カウント用
-      var dayNum = 1;
+      let dayNum = 1;
       // 週ごとのデータを作成して、calDateにpush
       while (dayNum <= lastDay) {
-        var weekData = [];
+        let weekData = [];
 
         // 日曜～土曜の日付データを配列で作成
-        for (var i = 0; i <= 6; i++) {
+        for (let i = 0; i <= 6; i++) {
           if (calData.length === 0 && i < firstWeekDay) {
             // 初週の1日以前の曜日は空文字
             weekData[i] = "";

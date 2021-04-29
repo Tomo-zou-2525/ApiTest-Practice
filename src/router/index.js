@@ -25,6 +25,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/ApiTest.vue"),
   },
+  {
+    path: "/calendar",
+    name: "Calendar",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Calendar.vue"),
+  },
 ];
 
 const router = new VueRouter({

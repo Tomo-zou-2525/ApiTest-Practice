@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">DrawTool</router-link> |
       <router-link to="/about">Calender</router-link> |
-      <router-link to="/api-test">Api-Test</router-link>
+      <router-link to="/api-test">Api-Test</router-link> |
+      <router-link to="/calendar">Calendar-exe</router-link>
     </div>
     <router-view />
   </div>
@@ -11,7 +12,6 @@
 <script>
 export default {
   name: "App",
-  components: {},
 };
 </script>
 

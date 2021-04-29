@@ -44,25 +44,25 @@ import moment from "moment";
 export default {
   data() {
     return {
-      // weekdays:
-      // year: 2020,
-      // month: 3,
+      weekdays: moment().weekdays,
+      year: moment().year(),
+      month: moment().month(),
       day: -1,
       today: "",
       isModel: false,
     };
   },
   mounted() {
-    let date = this.$moment().format();
-    // let y = date.getFullYear();
-    // let m = ("0" + (date.getMonth() + 1)).slice(-2);
-    // let d = ("0" + date.getDate()).slice(-2);
+    let date = new Date();
+    let y = date.getFullYear();
+    let m = ("0" + (date.getMonth() + 1)).slice(-2);
+    let d = ("0" + date.getDate()).slice(-2);
 
-    // // yearとmonthを設定
-    // this.year = y;
-    // this.month = Number(m);
-    // // 今日の日付を設定
-    // this.today = y + "-" + m + "-" + d;
+    // yearとmonthを設定
+    this.year = y;
+    this.month = Number(m);
+    // 今日の日付を設定
+    this.today = y + "-" + m + "-" + d;
   },
   methods: {
     /**
@@ -79,8 +79,8 @@ export default {
      * 日は引数
      */
     isToday: function(day) {
-      // let date = this.year + "-" + ("0" + this.month).slice(-2) + "-" + day;
-      if (this.today === this.date) {
+      let date = this.year + "-" + ("0" + this.month).slice(-2) + "-" + day;
+      if (this.today === date) {
         return true;
       }
       return false;

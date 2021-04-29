@@ -119,9 +119,6 @@ export default {
       return this.currentDate.format("YYYY-MM");
     },
   },
-  mounted() {
-    console.log(this.getCalendar());
-  },
 };
 </script>
 

@@ -17,13 +17,13 @@
         </tr>
       </tbody>
     </table>
-    <form>
+    <form class="post-form">
       <!-- 投稿タイトルをバインド -->
       <input v-model="posts.title" type="text" placeholder="Title" />
       <!-- 投稿内容をバインド -->
       <input v-model="posts.body" type="text" placeholder="Content" />
+      <button type="button" @click="postPosts()">投稿</button>
     </form>
-    <button type="button" @click="postPosts()">投稿</button>
   </div>
 </template>
 <script>
@@ -49,9 +49,16 @@ export default {
   methods: {
     // APIでコンテンツを取得
     getContents() {
-      const url = "http://localhost:3000/contents";
-      axios
-        .get(url)
+      const instanceGet = axios.create({
+        baseURL: "http://localhost:3000/",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        timeout: 2000,
+      });
+
+      instanceGet
+        .get("/contents")
         .then((res) => {
           this.contents = res.data;
         })
@@ -60,12 +67,20 @@ export default {
         });
     },
     async postPosts() {
+      const instancePost = axios.create({
+        baseURL: "http://localhost:3000/",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        timeout: 2000,
+      });
+
       //urlを定数に代入
-      const url = "http://localhost:3000/posts";
+      // const url = "http://localhost:3000/posts";
       //awaitでpost リクエストを先に流す
-      await axios.post(url, this.posts);
+      await instancePost.post("/posts", this.posts);
       //連続してawaitでgetメソッドを流す
-      const response = await axios.get(url); // getで再取得
+      const response = await axios.get("/contents"); // getで再取得
       this.contents = response.data; // 再取得した結果を代入
       this.$swal("保存に成功しました", "クリックしてください", "success");
     },
@@ -84,5 +99,8 @@ export default {
   width: 100%;
   color: #fff;
   font-size: 20px;
+}
+.post-form {
+  margin-right: 2rem;
 }
 </style>

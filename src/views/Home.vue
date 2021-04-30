@@ -55,13 +55,23 @@ export default {
       // ドラッグ状態かを判定するフラグ
       isDrag: false,
       // 現在の状態を表すパラメータ・drawtoolを追加
-      //マジックナンバー
-      drawtool: "penBlack",
-      color: "#000000",
+      drawtool: "drawing",
+      color: this.COLOR_BLACK,
     };
   },
   // マウント要素を指定
   mounted() {
+    //描画色のパラメータを定数化
+    const COLOR_BLACK = "#000";
+
+    //描画状態のパラメータを定数化
+    const DRAW_MODE_PEN = "drawing";
+    console.log(DRAW_MODE_PEN);
+
+    //描画状態のパラメータを定数化
+    const DRAW_MODE_ERASER = "doEraser";
+    console.log(DRAW_MODE_ERASER);
+
     // canvas要素の取得（マウント）
     this.canvas = document.querySelector("#draw-area");
     // canvasの画像要素指定
@@ -73,7 +83,7 @@ export default {
     // 線の太さを指定
     this.context.lineWidth = 5;
     // 線のスタイルに色を指定
-    this.context.strokeStyle = "#000";
+    this.context.strokeStyle = COLOR_BLACK;
   },
   methods: {
     //描画
@@ -116,9 +126,8 @@ export default {
       // cleaRect(x, y, w, h) x,yは座標原点、w,hは四角形の幅
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
-    //マジックナンバー
     drawLine: function() {
-      this.drawtool = "ペン";
+      this.drawtool = this.DRAW_MODE_PEN;
 
       // 描画スタイルの設定
       this.context.lineCap = "round";
@@ -127,7 +136,7 @@ export default {
       this.context.strokeStyle = this.color;
     },
     doEraser: function() {
-      this.drawtool = "doEraser";
+      this.drawtool = this.DRAW_MODE_ERASER;
 
       // 描画スタイルの設定
       this.context.lineCap = "square";

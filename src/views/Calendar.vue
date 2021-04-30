@@ -23,12 +23,12 @@
             :class="{ outside: currentMonth !== day.month }"
             v-for="(day, insidepass) in week"
             :key="insidepass"
-            @click="dateClick(xxx)"
+            @click="dateClick(day)"
           >
             <div
-              :class="{ 'calendar-today': isToday(xxx), active: day === xxx }"
+              :class="{ 'calendar-today': isToday(day), active: day === day }"
             >
-              <div v-if="isToday(xxx)">今日</div>
+              <div v-if="isToday(day)">今日</div>
               <div v-else class="calendar-day">
                 {{ day.day }}
               </div>
@@ -100,10 +100,7 @@ export default {
     //現在の日時を判定する処理
     isToday: function() {
       const date = moment();
-      if (this.getCalendar === date) {
-        return true;
-      }
-      return false;
+      return this.getCalendar === date;
     },
   },
   computed: {

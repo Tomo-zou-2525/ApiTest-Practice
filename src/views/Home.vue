@@ -55,6 +55,7 @@ export default {
       // ドラッグ状態かを判定するフラグ
       isDrag: false,
       // 現在の状態を表すパラメータ・drawtoolを追加
+      //マジックナンバー
       drawtool: "penBlack",
       color: "#000000",
     };
@@ -115,6 +116,7 @@ export default {
       // cleaRect(x, y, w, h) x,yは座標原点、w,hは四角形の幅
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
+    //マジックナンバー
     drawLine: function() {
       this.drawtool = "ペン";
 

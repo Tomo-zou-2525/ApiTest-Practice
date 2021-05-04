@@ -55,12 +55,21 @@ export default {
       // ドラッグ状態かを判定するフラグ
       isDrag: false,
       // 現在の状態を表すパラメータ・drawtoolを追加
-      drawtool: "penBlack",
-      color: "#000000",
+      drawtool: "drawing",
+      color: this.COLOR_BLACK,
     };
   },
   // マウント要素を指定
   mounted() {
+    //描画色のパラメータを定数化
+    const COLOR_BLACK = "#000";
+
+    //描画状態のパラメータを定数化
+    const DRAW_MODE_PEN = "drawing"; // eslint-disable-line
+
+    //描画状態のパラメータを定数化
+    const DRAW_MODE_ERASER = "doEraser"; // eslint-disable-line
+
     // canvas要素の取得（マウント）
     this.canvas = document.querySelector("#draw-area");
     // canvasの画像要素指定
@@ -72,11 +81,11 @@ export default {
     // 線の太さを指定
     this.context.lineWidth = 5;
     // 線のスタイルに色を指定
-    this.context.strokeStyle = "#000";
+    this.context.strokeStyle = COLOR_BLACK;
   },
   methods: {
     //描画
-    draw: function(e) {
+    draw: function (e) {
       // layerX or layerY （現在の座標を取得）
       let x = e.layerX;
       let y = e.layerY;
@@ -91,7 +100,7 @@ export default {
       this.context.stroke();
     },
     //描画開始(mousedown)
-    paintStart: function(e) {
+    paintStart: function (e) {
       let x = e.layerX;
       let y = e.layerY;
 
@@ -106,17 +115,17 @@ export default {
       this.isDrag = true;
     },
     // 描画終了
-    paintEnd: function() {
+    paintEnd: function () {
       this.context.closePath();
       this.isDrag = false;
     },
-    clearCanvas: function() {
+    clearCanvas: function () {
       // cleaRect:四角形の形にクリアにするメソッド
       // cleaRect(x, y, w, h) x,yは座標原点、w,hは四角形の幅
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
-    drawLine: function() {
-      this.drawtool = "ペン";
+    drawLine: function () {
+      this.drawtool = this.DRAW_MODE_PEN;
 
       // 描画スタイルの設定
       this.context.lineCap = "round";
@@ -124,8 +133,8 @@ export default {
       this.context.lineWidth = 5;
       this.context.strokeStyle = this.color;
     },
-    doEraser: function() {
-      this.drawtool = "doEraser";
+    doEraser: function () {
+      this.drawtool = this.DRAW_MODE_ERASER;
 
       // 描画スタイルの設定
       this.context.lineCap = "square";
@@ -134,7 +143,7 @@ export default {
       this.context.strokeStyle = "#fff";
     },
     // download属性を使用してダウンロードファイルを生成
-    download: function() {
+    download: function () {
       let link = document.createElement("a");
       link.href = this.canvas.toDataURL("image/png");
       link.download =
@@ -152,15 +161,17 @@ export default {
 <style scoped>
 #nav-bar {
   background-color: #333;
-  height: 60px;
+  height: 4.28rem;
   width: 100%;
 }
 
 .canvas-map {
-  background-image: linear-gradient(0deg, transparent 31px, #333 32px),
-    linear-gradient(90deg, transparent 31px, #333 32px);
+  background-image: linear-gradient(0deg, transparent 31px, #333 2.28rem),
+    linear-gradient(90deg, transparent 2.21rem, #333 0.2rem);
   background-color: #e6e3ad;
-  background-size: 32px 32px;
+  background-size: 2.28rem 2.28rem;
+  height: 100%;
+  width: 100%;
 }
 
 /* 消しゴム要素の画像指定 */
@@ -169,11 +180,11 @@ export default {
 }
 
 .button-style {
-  margin-left: 10px;
+  margin-left: 0.8rem;
   background-color: #ddd;
   font-size: 1.4em;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 0.8rem 2.4rem;
   display: inline;
 }
 </style>

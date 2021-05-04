@@ -21,6 +21,8 @@ Vue.use(require("vue-moment"));
 
 Vue.config.productionTip = false;
 
+axios.defaults.baseURL = "http://localhost:3000/";
+
 new Vue({
   router,
   render: (h) => h(App),

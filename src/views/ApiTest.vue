@@ -75,7 +75,7 @@ export default {
         },
         timeout: 2000,
       });
-      //インスタンスでURL取得（書き方おかしいですかね？）
+
       await instancePost.post("/posts", this.posts);
       const response = await axios.get("/contents"); // getで再取得
       this.contents = response.data; // 再取得した結果を代入

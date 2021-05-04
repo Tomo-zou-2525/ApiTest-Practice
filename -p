@@ -1,0 +1,204 @@
+[33mcommit c6442c3f4646caef6108bc69cc377dc1967165c0[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Tue May 4 17:37:13 2021 +0900
+
+    fix:db.json
+
+[33mcommit 9c1356bc0cfff1bbb2ba7e4f2db74387a664f8c1[m[33m ([m[1;31morigin/develop[m[33m)[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Apr 30 17:09:25 2021 +0900
+
+    マジックナンバー修正
+
+[33mcommit 281938876f782b1179801a2b19a00b4d873dbc7d[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Apr 30 12:43:16 2021 +0900
+
+    マジックナンバーについて
+
+[33mcommit 1c6f0c00e998f5710b0b498ceb708f0722250337[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Apr 30 05:58:12 2021 +0900
+
+    課題提出
+
+[33mcommit dab5d8494960aeb2976a0c03b4f8634224b4eae2[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Apr 30 03:48:48 2021 +0900
+
+    oekaki
+
+[33mcommit 531c650dfed2501adab45725ce369dd27e8584c9[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Apr 30 03:16:21 2021 +0900
+
+    calendar.vue更新
+
+[33mcommit ccf56e97b1c1a6f70dafb5d71281091dde873235[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Thu Apr 29 19:38:26 2021 +0900
+
+    Calendar機能再作
+
+[33mcommit d7f0ffbe77e283148f7e984a320c56936e65dad1[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Apr 26 23:35:15 2021 +0900
+
+    axiosを用いた投稿機能を実装
+
+[33mcommit e9361c6eff3307ff62bce02a61ef49c1877ffe56[m
+Merge: 091c33e 6d388c7
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Apr 25 22:19:38 2021 +0900
+
+    コンフリクト解消
+
+[33mcommit 091c33e80f972460c64bc48b0cc8240f4f14d34d[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Apr 25 22:14:21 2021 +0900
+
+    bootstrap追加
+
+[33mcommit 6d388c73eb1aa786cf69c9c2cd5806959475adb8[m
+Author: TakehiroTada <taketada.works.gmail.com>
+Date:   Sun Apr 25 20:14:07 2021 +0900
+
+    use npm
+
+[33mcommit 8c5ce5438d3a7042b46a57e7697bf82239bbc1e0[m
+Author: TakehiroTada <taketada.works.gmail.com>
+Date:   Sun Apr 25 20:09:51 2021 +0900
+
+    review commit
+
+[33mcommit 28daa8758fff1fee3cb6e7e4e6c32eb946f3151b[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Apr 25 19:30:10 2021 +0900
+
+    text修正
+
+[33mcommit 24de560d4c9cb820a2023efe8b4f87ecba42389c[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Apr 25 18:53:16 2021 +0900
+
+    toukounaiyou
+
+[33mcommit 82b38d9f1f9a5ba68201bc4ae52ace689c15ff90[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Apr 25 18:47:58 2021 +0900
+
+    initial commit
+
+[33mcommit 53d6fdbceee5d246b90ce159a46c5cab52c8cb94[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Apr 19 22:01:40 2021 +0900
+
+    色彩変更機能追加
+
+[33mcommit 55b2ed314eccd47ce4e4fc86cd0aa7b474231b6c[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Apr 19 04:54:49 2021 +0900
+
+    drawTool Calender router設定
+
+[33mcommit c103207feb1483f6dce795bbfdadaefbf24a22d2[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Apr 19 04:35:34 2021 +0900
+
+    vue router追加
+
+[33mcommit 138b2d5afe7a2a35f83258f63e456170abd423c2[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Apr 19 04:02:28 2021 +0900
+
+    canvassの背景を製図用紙調に変更
+
+[33mcommit 617098a88d9b85d3ce1da17de1fb77da0cad398b[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Tue Nov 3 23:19:48 2020 +0900
+
+    fix:各種変数名を変更
+
+[33mcommit 2cd8d309a0f35454cd4fe267b3989e937dd196f1[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Oct 2 21:40:15 2020 +0900
+
+    feat:カラーピッカーライブラリ導入
+
+[33mcommit 025f616714112bb43da882214b56a65c43552a34[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Fri Oct 2 19:44:28 2020 +0900
+
+    feat:変数名を修正
+
+[33mcommit 68bb5d37d68f0bd2b30a4fa82e806f90121d78f0[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Sep 27 17:46:29 2020 +0900
+
+    feat:GitHub Pages用の設定追加
+
+[33mcommit beb262d7b36ebe72854d903a4ee11f66b538748f[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Sep 27 17:37:25 2020 +0900
+
+    feat:GitHub Pages 公開にむけた修正
+
+[33mcommit 1fefa8845e3d8d5d13a8052af5b85b98d15bb3e6[m[33m ([m[1;31morigin/hotfix[m[33m, [m[1;32mhotfix[m[33m)[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Sep 14 19:53:53 2020 +0900
+
+    doc:コメントの追加
+
+[33mcommit e4877f5bcada96d49bd6e8469e55ae20a56023bc[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Sep 14 10:57:47 2020 +0900
+
+    feat:画像の保存機能を追加
+
+[33mcommit e5483a953036a041ed8189a582c1cbbd5869af4d[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Sep 14 10:49:07 2020 +0900
+
+    feat:ペンの配色を変える機能を追加
+
+[33mcommit c0d1362e084b3da045dd876b878fc10d7d57b492[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Mon Sep 14 10:18:15 2020 +0900
+
+    feat:消しゴム機能の追加、及びカーソルの選択機能の追加
+
+[33mcommit f867ee27d3aae0a20405ed51975ace281f61871d[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Sep 13 23:38:36 2020 +0900
+
+    doc:コメントアウトの記述
+
+[33mcommit 6e4a5ed4268ae29ece42241e4c8c5d7a0e38817b[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sun Sep 13 23:23:36 2020 +0900
+
+    feat:clearボタンの実装
+
+[33mcommit 8ed975a6ada36822f70d02a1f616389f91b44ffc[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Sat Sep 12 15:08:21 2020 +0900
+
+    feat:draw機能実装
+
+[33mcommit aeba9b8c711d568db5baf9203525e4555a4faab7[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Thu Sep 10 17:01:48 2020 +0900
+
+    feat:描画機能の追加・canvas要素と各種イベントの追加
+
+[33mcommit 62a6d5d53fd39807a90a9212d7682ba4b30bf380[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Wed Sep 9 20:11:51 2020 +0900
+
+    initial-commit
+
+[33mcommit 0a4dda8901272c83224d38d9b587b5ac4f89720a[m
+Author: 友造-2525 <bathbook1990tomozou@gmail.com>
+Date:   Wed Sep 9 19:35:47 2020 +0900
+
+    init
